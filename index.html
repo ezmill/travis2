@@ -16,13 +16,92 @@
 		<div id="black-bg"></div>
 		<div class="tour-text">
 			<div id="exit-button">
-				EXIT
+				<!-- EXIT -->
 			</div>
-			<p>CHICAGO / MAR 8</p>
+			<div class="tour-dates-div">
+				<img id="dates" class="tour-dates undraggable" src="img/TOURDATES.png" alt="">
+				<div class="date-link-container">
+					<div class="half date-link">
+						<div class="half-test"></div>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"></a><div class="half-test"></div>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>
+					<div class="half date-link">
+						<a href="google.com"><div class="half-test"></div></a>
+					</div>					
+				</div>
+
+			</div>
+
+			<!-- <p>CHICAGO / MAR 8</p> -->
 		</div>
 	</div>
 
-		<img id="poster" class="poster undraggable" src="img/tourposter.jpg" alt="">
+		<img id="poster" class="poster undraggable" src="img/tourposter2.jpg" alt="">
 
 
 		<div class="button-img-div">
@@ -45,6 +124,7 @@
 <script>
 	document.getElementById('poster').ondragstart = function() { return false; };
 	document.getElementById('tickets').ondragstart = function() { return false; };
+	document.getElementById('dates').ondragstart = function() { return false; };
 
 	$('#purchase').click(function(e){
 		e.preventDefault();
@@ -55,10 +135,10 @@
 		    }, duration: 1});
 		console.log("test");
 		// opaque.style["z-index"] = 3;
-		$("#black-bg").animate({ opacity: .7 }, "slow", function(){
+		$("#black-bg").animate({ opacity: .9 }, "slow", function(){
 		})
 		$(".tour-text").animate({opacity: 1}, "slow");
-
+		$("body").animate({scrollTop: 500}, "slow");
 
 	})
 	$("#exit-button").click(function(e){
@@ -74,6 +154,6 @@
 			        opaque.css('zIndex', ~~0);
 			    }, duration: 1});
 			});
-	})
+	});
 </script>
 </html>
