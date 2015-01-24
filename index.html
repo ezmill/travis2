@@ -12,9 +12,21 @@
 <body>
 
 	<div class="poster-div">
+	<div id="opaque">
+		<div id="black-bg"></div>
+		<div class="tour-text">
+			<div id="exit-button">
+				EXIT
+			</div>
+			<p>CHICAGO / MAR 8</p>
+		</div>
+	</div>
+
 		<img id="poster" class="poster undraggable" src="img/tourposter.jpg" alt="">
+
+
 		<div class="button-img-div">
-			<a target="_blank" href="http://google.com/">
+			<a id="purchase" href="">
 				<img id="tickets" src="img/button2.png" alt="" class="button-img">
 			</a>
 	</div>
@@ -26,12 +38,42 @@
 	</div>
 
 	<div class="boxMusic">
-    	<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/47479282&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true&amp;start_track=1"></iframe>
+    	<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/47479282&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true&amp;start_track=1"></iframe>
 	</div>
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
 	document.getElementById('poster').ondragstart = function() { return false; };
 	document.getElementById('tickets').ondragstart = function() { return false; };
+
+	$('#purchase').click(function(e){
+		e.preventDefault();
+		var opaque = $("#opaque");
+		$({z: ~~opaque.css('zIndex')}).animate({  z: 3}, {
+		    step: function() {
+		        opaque.css('zIndex', ~~3);
+		    }, duration: 1});
+		console.log("test");
+		// opaque.style["z-index"] = 3;
+		$("#black-bg").animate({ opacity: .7 }, "slow", function(){
+		})
+		$(".tour-text").animate({opacity: 1}, "slow");
+
+
+	})
+	$("#exit-button").click(function(e){
+		e.preventDefault();
+
+		$("#black-bg").animate({ opacity: 0 }, "slow", function(){
+
+		});
+		$(".tour-text").animate({opacity: 0}, "slow", function(){
+				var opaque = $("#opaque");
+				$({z: ~~opaque.css('zIndex')}).animate({  z: 0}, {
+			    step: function() {
+			        opaque.css('zIndex', ~~0);
+			    }, duration: 1});
+			});
+	})
 </script>
 </html>
