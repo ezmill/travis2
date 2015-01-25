@@ -166,6 +166,10 @@ a:hover {
     text-decoration: none;
     outline: 0;
 }
+.poster-div, .poster{
+    background: rgba(0,0,0,0.7);
+
+}
 .poster-div, .poster, .button-img-div, .button-img{
     display: block;
     margin-left: auto;
@@ -173,12 +177,15 @@ a:hover {
     max-width: 100vw;
     outline: none;
     position: relative;
-    background: rgba(0,0,0,0.7);
 
 }
 .button-img-div{
     margin-top: -100px;
     outline: 0;
+
+}
+.button-img{
+    background: none;
 
 }
 .button a, .button a:hover, .button a:focus {
@@ -217,7 +224,9 @@ a:hover {
     margin-right: auto;
     max-width: 100vw;
     position: relative;
+    vertical-align: middle;
 }
+
 .half{
     width: 50vw;
     /*height: 16px;*/
@@ -227,17 +236,19 @@ a:hover {
 }
 .half-test{
     width: 50%;
-    height: 4.06vw;
-    background: rgba(255,255,255,0.5);
+    height: 3.7vw;
     float: right;
+    background-color: rgba(255,255,255,0.6);
+
 }
 .date-link{
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    /*background-color: red;*/
     float: right;
     margin-top: 1.88vw;
+}
+#dates{
 }
 .date-link-container{
     width: 100vw;
@@ -246,12 +257,20 @@ a:hover {
     top: 1vw;
     left: 0;
 }
-@media only screen and (max-width: 1100px) {
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#dates-stack{
+    display: none;
+}
+@media only screen and (max-width: 1200px) {
     .button-img-div{
         margin-top: -75px;
     }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .button-img-div{
         margin-top: -50px;
     }
@@ -259,6 +278,47 @@ a:hover {
 @media only screen and (max-width: 600px) {
     .button-img-div{
         margin-top: -25px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    #dates{
+        display: none;
+    }
+    #dates-stack{
+        display: block;
+    }
+    .tour-text{
+        position: absolute;
+    }
+    .date-link-container{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 6vw;
+        left: 0;
+    }
+    .half{
+        width: 100vw;
+        /*height: 16px;*/
+        height: 5vw;
+        display: inline-block;
+        /*margin-top: -10;*/
+    }
+    .half-test{
+        width: 100%;
+        height: 6vw;
+        float: right;
+        background-color: rgba(255,255,255,0.6);
+
+    }
+    .date-link{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        /*background-color: rgba(255,255,255,0.6);*/
+        margin-bottom: 1.7vw;
+        margin-top: 0;
     }
 }
 /*committing*/
