@@ -282,10 +282,14 @@ a:hover {
 }*/
 .og-close{
   position: absolute;
-width: 40px;
+/*width: 40px;
 height: 40px;
 top: 20px;
-left: 20px;
+left: 20px;*/
+        top: 2.5vw;
+        left: 2.5%;
+       width: 5%;
+       height: 5%; 
 cursor: pointer;  
 z-index: 4;
 }
@@ -351,10 +355,7 @@ z-index: 4;
 }
 @media only screen and (min-width: 900px){
     .og-close{
-        top: 2.5vw;
-        left: 2.5%;
-       width: 5%;
-       height: 5%; 
+
     }
 
 }
