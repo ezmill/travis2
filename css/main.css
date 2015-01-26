@@ -296,8 +296,8 @@ top: 20px;
 left: 20px;*/
         top: 2.5vw;
         left: 2.5%;
-       width: 2%;
-       height: 2%; 
+       width: 3%;
+       height: 3%; 
 cursor: pointer;  
 z-index: 4;
 }
@@ -373,8 +373,8 @@ z-index: 4;
         position:absolute;
         top: 2.5vw;
         left: 2.5%;
-        width: 3%;
-        height: 3%; 
+        width: 4%;
+        height: 4%; 
     }
 }
 @media only screen and (min-width: 900px){
