@@ -14,16 +14,27 @@ body{
 	min-height: 900px;
     pointer-events:none;
 	position: fixed;
+	z-index: 10;
     -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 	/*height: 800px;*/
 }
 .top-teeth{
 	-webkit-animation-name: teethup;
+	-moz-animation-name: teethup;
+	animation-name: teethup;
 }
 .bottom-teeth{
 	-webkit-animation-name: teethdown;
+	-moz-animation-name: teethdown;
+	animation-name: teethdown;
 }
 .gallery{
 	/*z-index: -1;*/
@@ -96,4 +107,37 @@ body{
     from {bottom: 0;}
     to {bottom: -360px;}
 }
+@-moz-keyframes teethup {
+    from {top: 0;}
+    to {top: -320px;}
+}
 
+@-moz-keyframes teethdown {
+    from {bottom: 0;}
+    to {bottom: -360px;}
+}
+@keyframes teethup {
+    from {top: 0;}
+    to {top: -320px;}
+}
+
+@keyframes teethdown {
+    from {bottom: 0;}
+    to {bottom: -360px;}
+}
+
+@media screen and (max-width: 1199px) {
+    .download {
+        width: 33.33333%;
+    }
+}
+@media screen and (max-width: 899px) {
+    .download {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 599px) {
+    .download {
+        width: 100%;
+    }
+}
