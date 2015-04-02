@@ -85,7 +85,7 @@ li a{
 .did-you{
 	position: fixed;
 	top: 50vh;
-	font-family: 'Malfunction';
+	font-family: 'Franklin Gothic Extra Condensed';
 	-ms-transform: rotate(1deg); /* IE 9 */
     -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
     transform: rotate(1deg);
@@ -116,5 +116,8 @@ li a{
     }
     .did-you{
     	font-size: 10vw;
+    }
+    .header{
+    	font-size: 40px;
     }
 }
