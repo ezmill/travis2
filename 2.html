@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="css/2.css">
 		<link rel="icon" href="tsimages/favicon.ico" type="image/x-icon" />
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		<script src="js/vendor/jquery-1.11.2.js"></script>
 		<style>
 		</style>
 	</head>
@@ -26,8 +27,52 @@
 			<li><a href="">MUSIC</a></li>
 			<li><a href="">VIDEOS</a></li>
 		</ul>
+		<a href="" id="menu-button">MENU</a>
+		<div id="offscreen">
+			<ul class="mobile-nav">
+				<li><a href="">MERCH</a></li>
+				<li><a href="">BLOG</a></li>
+				<li><a href="">PHOTOS</a></li>
+				<li><a href="">SHOWS</a></li>
+				<li><a href="">MUSIC</a></li>
+				<li><a href="">VIDEOS</a></li>
+			</ul>			
+		</div>
+
 		<h1 class="header">TRAVIS SCOTT</h1>
-		<h1 class="did-you">DID YOU SURVIVE THE RODEO?</h1>
+		<div class="red-container">
+			<h1 class="did-you">
+				DID
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				YOU
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				SURVIVE
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				THE
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				RODEO
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				?
+			</h1>
+		</div>
 		<img src="img/bigtourimage.png" alt="">
+		<script>
+			var menu = document.getElementById("menu-button");
+			var count = 0;
+			menu.addEventListener("click", function(e){
+				e.preventDefault();
+				// offscreen = document.getElementById("offscreen");
+				// offscreen.
+
+				if(count%2 ==0){
+					$("body").animate({ left: "50vw" }, "fast");
+					$(".did-you").animate({ left: "50vw" }, "fast");
+				} else{
+					$("body").animate({ left: "0" }, "fast");
+					$(".did-you").animate({ left: "0" }, "fast");
+				}
+				count++;
+			});
+		</script>
 	</body>
 </html>
