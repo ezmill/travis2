@@ -27,17 +27,30 @@
 			<li><a href="">MUSIC</a></li>
 			<li><a href="">VIDEOS</a></li>
 		</ul>
-		<a href="" id="menu-button">MENU</a>
-		<div id="offscreen">
+		<!-- <a href="" id="menu-button">MENU</a> -->
+		<!-- <div id="offscreen"> -->
 			<ul class="mobile-nav">
 				<li><a href="">MERCH</a></li>
 				<li><a href="">BLOG</a></li>
 				<li><a href="">PHOTOS</a></li>
+							<h1 class="did-you-mobile">
+				DID
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				YOU
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				SURVIVE
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				THE
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				RODEO
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				?
+			</h1>
 				<li><a href="">SHOWS</a></li>
 				<li><a href="">MUSIC</a></li>
 				<li><a href="">VIDEOS</a></li>
 			</ul>			
-		</div>
+		<!-- </div> -->
 
 		<h1 class="header">TRAVIS SCOTT</h1>
 		<div class="red-container">
@@ -56,7 +69,7 @@
 			</h1>
 		</div>
 		<!-- <img src="img/bigtourimage-3.png" alt=""> -->
-		<img src="img/new/1.png" alt="">
+		<img class="first" src="img/new/1.png" alt="">
 		<img src="img/new/2.png" alt="">
 		<img src="img/new/3.png" alt="">
 		<img src="img/new/4.png" alt="">
@@ -66,22 +79,24 @@
 		<img src="img/new/8.png" alt="">
 		<img src="img/new/9.png" alt="">
 		<script>
-			var menu = document.getElementById("menu-button");
-			var count = 0;
-			menu.addEventListener("click", function(e){
-				e.preventDefault();
-				// offscreen = document.getElementById("offscreen");
-				// offscreen.
+			// var menu = document.getElementById("menu-button");
+			// var count = 0;
+			// menu.addEventListener("click", function(e){
+			// 	e.preventDefault();
+			// 	// offscreen = document.getElementById("offscreen");
+			// 	// offscreen.
 
-				if(count%2 ==0){
-					$("body").animate({ left: "50vw" }, "fast");
-					$(".did-you").animate({ left: "50vw" }, "fast");
-				} else{
-					$("body").animate({ left: "0" }, "fast");
-					$(".did-you").animate({ left: "0" }, "fast");
-				}
-				count++;
-			});
+			// 	if(count%2 ==0){
+			// 		$("body").animate({ left: "50vw" }, "fast");
+			// 		$(".did-you").animate({ left: "50vw" }, "fast");
+			// 		$("body").css("overflow", "hidden");
+			// 	} else{
+			// 		$("body").animate({ left: "0" }, "fast");
+			// 		$(".did-you").animate({ left: "0" }, "fast");
+			// 		$("body").css("overflow", "auto");
+			// 	}
+			// 	count++;
+			// });
 		</script>
 	</body>
 </html>

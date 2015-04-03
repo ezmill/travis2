@@ -2,6 +2,10 @@ body{
 	margin: 0;
 	background: #FAEC21;
 	position: relative;
+	overflow-x:hidden;
+}
+.img-container{
+
 }
 img{
 	vertical-align: middle;
@@ -10,6 +14,7 @@ img{
 	/*left: 0;*/
 	width: 100vw;
 	z-index: -1;
+	height: 100%;
 }
 @font-face {
   font-family: 'Franklin Gothic Extra Condensed';
@@ -48,15 +53,14 @@ img{
 .mobile-nav{
 	display: none;
 	position: absolute;
-    top: 30px;
-    left: 50px;   
+    /*top: 30px;*/
+    /*left: 50px;   */
 	list-style: none;
 }
 #offscreen{
 	display: none;
 	position: absolute;
-	width: 50vw;
-	left: -50vw;
+	/*left: -50vw;*/
 	top: 0;
 }
 #menu-button{
@@ -95,6 +99,19 @@ li a{
     margin: 0 0 0 5vw;
     width: 100vw;
 }
+
+.did-you-mobile{
+	display: none;
+	/*top: 50vh;*/
+	/*position: fixed;*/
+	font-family: 'Franklin Gothic Extra Condensed';
+	-ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+    color: red;
+    margin: 0 0 0 5vw;
+    width: 100vw;
+}
 @media screen and (max-width: 1000px) {
     .did-you{
     	font-size: 6vw;
@@ -108,16 +125,51 @@ li a{
     #offscreen{
     	display: block;
     }
-    .mobile-nav{
-    	display: block;
+    li a{
+    	color: white;
     }
+    img{
+    	width: 1000px;
+    	position: relative;
+    	/*left: 0;*/
+    	margin-left: -300px;
+    }
+	.first{
+		margin-top: -250px;
+	}
+    li{
+		text-align: center;
+		font-size: 16px;
+    }
+    .mobile-nav{
+		width: 100vw;
+		padding: 0;
+    	display: block;
+    	margin-top: 20vh;
+    	position: fixed;
+    }
+    .did-you-mobile{
+		display: none;
+    	font-size: 20px;
+    	display: block;
+	}
     #menu-button{
     	display: inline;
     }
     .did-you{
     	font-size: 10vw;
+    	display: none;
     }
     .header{
     	font-size: 40px;
+    	color: white;
+    }
+
+}
+
+
+@media screen and (max-width: 400px) {
+    .header{
+    	/*font-size: 30px;*/
     }
 }
