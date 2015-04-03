@@ -134,13 +134,13 @@ li a{
     	color: white;
     }
     img{
-    	width: 300vw;
+    	width: 500vw;
     	position: relative;
     	/*left: 0;*/
-    	margin-left: -100vw;
+    	margin-left: -166.66666vw;
     }
 	.first{
-		margin-top: -250px;
+		margin-top: -500px;
 	}
     li{
 		text-align: center;
