@@ -20,6 +20,7 @@ img{
 	/*left: 0;*/
 	width: 100vw;
 	z-index: -1;
+	pointer-events: none;
 }
 @font-face {
   font-family: 'Franklin Gothic Extra Condensed';
@@ -44,7 +45,8 @@ img{
 	position: absolute;
 	/*top: 125px;*/
 	margin-top: 6vw;
-	font-size: 50px;
+	font-size: 30px;
+	z-index: -1;
 	letter-spacing: 10px;
 	font-family: 'Franklin Gothic Extra Condensed';
 }
@@ -195,20 +197,12 @@ a:focus, *:focus {
     	font-size: 10vw;
     	display: none;
     }
-    .header{
-    	font-size: 40px;
-    }
 
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 400px) {
     .header a{
     	color: white;
-    }
-}
-@media screen and (max-width: 400px) {
-    .header{
-    	font-size: 30px;
     }
     .did-you{
     	font-size: 8vw;
