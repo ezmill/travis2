@@ -21,19 +21,19 @@
 	<body>
 		<div class="no-overflow">
 			<ul class="nav">
-				<li><a href="">MERCH</a></li>
-				<li><a href="">BLOG</a></li>
-				<li><a href="">PHOTOS</a></li>
-				<li><a href="">SHOWS</a></li>
-				<li><a href="">MUSIC</a></li>
-				<li><a href="">VIDEOS</a></li>
+				<li><a href="http://travisscott.myshopify.com">MERCH</a></li>
+				<li><a href="http://travis-x.tumblr.com">BLOG</a></li>
+				<li><a id="photos" href="#photos">PHOTOS</a></li>
+				<li><a id="shows" href="#shows">SHOWS</a></li>
+				<li><a href="https://soundcloud.com/travisscott-2">MUSIC</a></li>
+				<li><a href="https://www.youtube.com/channel/UCWY9g9jNYh6AS-E8-SKfBmA">VIDEOS</a></li>
 			</ul>
 			<!-- <a href="" id="menu-button">MENU</a> -->
 			<!-- <div id="offscreen"> -->
 				<ul class="mobile-nav">
-					<li><a href="">MERCH</a></li>
-					<li><a href="">BLOG</a></li>
-					<li><a href="">PHOTOS</a></li>
+					<li><a href="http://travisscott.myshopify.com">MERCH</a></li>
+					<li><a href="http://travis-x.tumblr.com">BLOG</a></li>
+					<li><a id="shows-mobile" href="#photos">PHOTOS</a></li>
 								<h1 class="did-you-mobile">
 					DID
 					&nbsp;&nbsp;&nbsp;&nbsp;
@@ -47,13 +47,14 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					?
 				</h1>
-					<li><a href="">SHOWS</a></li>
-					<li><a href="">MUSIC</a></li>
-					<li><a href="">VIDEOS</a></li>
+					<li><a id="shows-mobile" href="#shows">SHOWS</a></li>
+					<li><a href="https://soundcloud.com/travisscott-2">MUSIC</a></li>
+					<li><a href="https://www.youtube.com/channel/UCWY9g9jNYh6AS-E8-SKfBmA">VIDEOS</a></li>
 				</ul>			
+
 			<!-- </div> -->
 
-			<h1 class="header">TRAVIS SCOTT</h1>
+			<h1 class="header"><a href="">TRAVIS SCOTT</a></h1>
 			<div class="red-container">
 				<h1 class="did-you">
 					DID
@@ -68,6 +69,9 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					?
 				</h1>
+			</div>
+			<div class="coming-soon">
+				<p>COMING SOON</p>
 			</div>
 			<!-- <img src="img/bigtourimage-3.png" alt=""> -->
 			<img class="first" src="img/new/1.png" alt="">
@@ -100,6 +104,42 @@
 			// 	}
 			// 	count++;
 			// });
+			$("#photos, #shows").click(function(e){
+				e.preventDefault();
+				$("li a").css("text-decoration", "none");
+				$(this).css("text-decoration", "underline");
+				$("img").hide();
+				$(".did-you").hide();
+				$(".coming-soon").show();
+			})
+			$("#photos-mobile, #shows-mobile").click(function(e){
+				e.preventDefault();
+				// $(this).css("text-decoration", "underline");
+				// $("img").hide();
+				$(".mobile-nav").css("display", "none");
+				// $(this).css("text-decoration", "underline");
+				$("img").hide();
+				$(".did-you-mobile").hide();
+				$(".coming-soon").show();
+			})
+			$(document).ready(function() {
+			    // run test on initial page load
+			    checkSize();
+
+			    // run test on resize of the window
+			    $(window).resize(checkSize);
+			});
+
+			function checkSize(){
+				if ($(".nav").css("display") == "none" ){
+					$("img").show();
+					$(".coming-soon").hide();
+					$("#photos, #shows").css("text-decoration", "none");
+
+				}
+			}
+
+
 		</script>
 	</body>
 </html>

@@ -78,14 +78,41 @@ img{
 	color: black;
 	text-decoration: none;
 }
+.coming-soon{
+	display:none;
+	position: absolute;
+	top: 50%;
+	width: 100vw;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.coming-soon p{
+		font-family: "InsideOut";
+
+	font-size: 14px;
+
+	color: black;
+
+	text-align: center;
+
+}
+
 li{
 	margin: 30px 0;
 	font-family: "InsideOut";
 	font-size: 14px;
 }
-li a{
+a{
 	color: black;
 	text-decoration: none;
+
+}
+a:focus, *:focus {
+    noFocusLine: expression(this.onFocus=this.blur());
+}
+:focus{
+    outline:0; /*removes the dotted border*/
 }
 .red-container{
 	width: 100vw;
@@ -128,10 +155,10 @@ li a{
     	color: white;
     }
     img{
-    	width: 500vw;
+    	width: 600vw;
     	position: relative;
     	/*left: 0;*/
-    	margin-left: -166.66666vw;
+    	margin-left: -200vw;
     }
 	.first{
 		margin-top: -500px;
@@ -148,10 +175,10 @@ li a{
     	/*margin-top: 20vh;*/
     	position: fixed;
     	  /*position: relative;*/
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+	    top: 50%;
+	    -webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	    transform: translateY(-50%);
 
     }
     .did-you-mobile{
@@ -174,11 +201,14 @@ li a{
 
 }
 
-
+@media screen and (max-width: 460px) {
+    .header{
+    	color: white;
+    }
+}
 @media screen and (max-width: 400px) {
     .header{
     	font-size: 30px;
-    	color: white;
     }
     .did-you{
     	font-size: 8vw;
