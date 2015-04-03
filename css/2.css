@@ -202,7 +202,7 @@ a:focus, *:focus {
 }
 
 @media screen and (max-width: 460px) {
-    .header{
+    .header a{
     	color: white;
     }
 }
