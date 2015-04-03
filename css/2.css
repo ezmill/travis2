@@ -46,16 +46,20 @@ img{
 	/*top: 125px;*/
 	margin-top: 6vw;
 	font-size: 30px;
-	z-index: -1;
+	/*z-index: -1;*/
 	letter-spacing: 10px;
 	font-family: 'Franklin Gothic Extra Condensed';
+}
+.header a{
+	z-index: 1;
 }
 
 .nav{
     list-style: none;
     position: absolute;
     top: 30px;
-    left: 50px;   
+    left: 50px; 
+    z-index: 2;  
 }
 .mobile-nav{
 	display: none;
@@ -146,6 +150,21 @@ a:focus, *:focus {
     /*margin: 0 0 0 5vw;*/
     width: 100vw;
 }
+.videos, .music{
+	display: none;
+	width: 100vw;
+	margin: 0 auto;
+	/*text-align: center;*/
+	/*position: relative;*/
+	margin-top: 200px;
+	z-index: -1;
+}
+.videos iframe, .music iframe{
+	display: block;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
 @media screen and (max-width: 700px) {
     .nav {
         display: none;

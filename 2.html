@@ -25,15 +25,14 @@
 				<li><a href="http://travis-x.tumblr.com">BLOG</a></li>
 				<li><a id="photos" href="#photos">PHOTOS</a></li>
 				<li><a id="shows" href="#shows">SHOWS</a></li>
-				<li><a href="https://soundcloud.com/travisscott-2">MUSIC</a></li>
-				<li><a href="https://www.youtube.com/channel/UCWY9g9jNYh6AS-E8-SKfBmA">VIDEOS</a></li>
+				<li><a id="music" href="#music">MUSIC</a></li>
+				<li><a id="videos" href="#videos">VIDEOS</a></li>
 			</ul>
 			<!-- <a href="" id="menu-button">MENU</a> -->
-			<!-- <div id="offscreen"> -->
 				<ul class="mobile-nav">
 					<li><a href="http://travisscott.myshopify.com/">MERCH</a></li>
 					<li><a href="http://travis-x.tumblr.com">BLOG</a></li>
-					<li><a id="shows-mobile" href="#photos">PHOTOS</a></li>
+					<li><a id="photos-mobile" href="#photos">PHOTOS</a></li>
 								<h1 class="did-you-mobile">
 					DID
 					&nbsp;&nbsp;&nbsp;&nbsp;
@@ -48,11 +47,10 @@
 					?
 				</h1>
 					<li><a id="shows-mobile" href="#shows">SHOWS</a></li>
-					<li><a href="https://soundcloud.com/travisscott-2">MUSIC</a></li>
-					<li><a href="https://www.youtube.com/channel/UCWY9g9jNYh6AS-E8-SKfBmA">VIDEOS</a></li>
+					<li><a id="music-mobile" href="#music">MUSIC</a></li>
+					<li><a id="videos-mobile" href="#videos">VIDEOS</a></li>
 				</ul>			
 
-			<!-- </div> -->
 
 			<h1 class="header"><a href="">TRAVIS SCOTT</a></h1>
 			<div class="red-container">
@@ -82,7 +80,16 @@
 			<img src="img/new/6.png" alt="">
 			<img src="img/new/7.png" alt="">
 			<img src="img/new/8.png" alt="">
-			<img src="img/new/9.png" alt="">			
+			<img src="img/new/9.png" alt="">
+			<div class="videos">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/dY5F5EsQwqE" frameborder="0" allowfullscreen></iframe>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/RH9kl6XZixo" frameborder="0" allowfullscreen></iframe>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/65JN4ICQsag" frameborder="0" allowfullscreen></iframe>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/exJCk1QSQ6s" frameborder="0" allowfullscreen></iframe>
+			</div>			
+			<div class="music">
+				<iframe width="45%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/40174345&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+			</div>
 		</div>
 
 		<script>
@@ -106,9 +113,11 @@
 			// });
 			$("#photos, #shows").click(function(e){
 				e.preventDefault();
+				$(".music, .videos").hide();
 				$("li a").css("text-decoration", "none");
 				$(this).css("text-decoration", "underline");
 				$("img").hide();
+				$(".videos").hide();
 				$(".did-you").hide();
 				$(".coming-soon").show();
 			})
@@ -116,12 +125,67 @@
 				e.preventDefault();
 				// $(this).css("text-decoration", "underline");
 				// $("img").hide();
+				$(".music, .videos").hide();
 				$(".mobile-nav").css("display", "none");
 				// $(this).css("text-decoration", "underline");
 				$("img").hide();
+				$(".videos").hide();
 				$(".did-you-mobile").hide();
 				$(".coming-soon").show();
 			})
+			$("#videos").click(function(e){
+				e.preventDefault();
+				// $(this).css("text-decoration", "underline");
+				// $("img").hide();
+				$(".music, .coming-soon").hide();
+				$("li a").css("text-decoration", "none");
+				$(this).css("text-decoration", "underline");
+				// $(this).css("text-decoration", "underline");
+				$("img").hide();
+				$(".did-you").hide();
+				$(".videos").show();
+			})
+			$("#videos-mobile").click(function(e){
+				e.preventDefault();
+				$(".music, .coming-soon").hide();
+				// $(this).css("text-decoration", "underline");
+				// $("img").hide();
+				// $(".mobile-nav li a").css("text-decoration", "none");
+				// $(this).css("text-decoration", "underline");
+				$(".mobile-nav").css("display", "none");
+				// $(".nav").css("display", "none");
+				// $(this).css("text-decoration", "underline");
+				$("img").hide();
+				$(".did-you-mobile").hide();
+				$(".videos").show();
+			})
+			$("#music").click(function(e){
+				e.preventDefault();
+				$(".videos, .coming-soon").hide();
+				// $(this).css("text-decoration", "underline");
+				// $("img").hide();
+				$("li a").css("text-decoration", "none");
+				$(this).css("text-decoration", "underline");
+				// $(this).css("text-decoration", "underline");
+				$("img").hide();
+				$(".did-you").hide();
+				$(".music").show();
+			})
+			$("#music-mobile").click(function(e){
+				e.preventDefault();
+				$(".videos, .coming-soon").hide();
+				// $(this).css("text-decoration", "underline");
+				// $("img").hide();
+				// $(".mobile-nav li a").css("text-decoration", "none");
+				// $(this).css("text-decoration", "underline");
+				$(".mobile-nav").css("display", "none");
+				// $(".nav").css("display", "none");
+				// $(this).css("text-decoration", "underline");
+				$("img").hide();
+				$(".did-you-mobile").hide();
+				$(".music").show();
+			})
+
 			$(document).ready(function() {
 			    // run test on initial page load
 			    checkSize();
@@ -134,9 +198,20 @@
 				if ($(".nav").css("display") == "none" ){
 					$("img").show();
 					$(".coming-soon").hide();
-					$("#photos, #shows").css("text-decoration", "none");
-
+					$(".videos").hide();
+					$(".music").hide();
+					$("#photos, #shows, #videos, #music").css("text-decoration", "none");
+					$(".mobile-nav").show();
+					$(".did-you-mobile").show();
 				}
+				// if ($(".nav").css("display") == "block" ){
+				// 	$("img").show();
+				// 	$(".coming-soon").hide();
+				// 	$(".videos").hide();
+				// 	$(".music").hide();
+				// 	$("#photos, #shows, #videos, #music").css("text-decoration", "none");
+				// 	$(".nav").show();
+				// }
 			}
 
 
