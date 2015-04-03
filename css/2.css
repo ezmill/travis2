@@ -204,7 +204,7 @@ a:focus, *:focus {
     .header a{
     	color: white;
     }
-    .did-you{
-    	font-size: 7vw;
+    .did-you-mobile{
+    	font-size: 8vw;
     }
 }
