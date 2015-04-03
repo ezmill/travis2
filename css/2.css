@@ -197,6 +197,9 @@ a:focus, *:focus {
     	font-size: 10vw;
     	display: none;
     }
+    .header{
+		z-index: 1;
+    }
 
 }
 
