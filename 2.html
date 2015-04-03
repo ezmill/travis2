@@ -54,6 +54,7 @@
 
 
 			<h1 class="header"><a id="home" href="">TRAVIS SCOTT</a></h1>
+			<a class="back-button" href="#">&#60;</a>
 			<div class="red-container">
 				<h1 class="did-you">
 					DID
@@ -186,6 +187,18 @@
 				$(".did-you-mobile").hide();
 				$(".music").show();
 			})
+
+			$("#music-mobile, #videos-mobile, #shows-mobile, #photos-mobile").click(function(e){
+				e.preventDefault();
+				$(".back-button").show();
+			});
+			$(".back-button").click(function(e){
+				e.preventDefault();
+				$(".videos, .coming-soon, .music").hide();
+				$(".mobile-nav, .did-you-mobile, img").show();
+				$(".back-button").hide();
+			})
+
 
 			// $("#home").click(function(e){
 			// 	e.preventDefault();
