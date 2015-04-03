@@ -163,6 +163,7 @@ a:focus, *:focus {
 	display: block;
 	margin: 0 auto;
 	margin-top: 100px;
+	/*max-width: 700px;*/
 }
 .videos iframe:last-child{
 	margin-bottom: 100px;
@@ -234,6 +235,12 @@ footer a{
     .header{
 		z-index: 1;
     }
+    .videos iframe, .music iframe{
+		display: block;
+		margin: 0 auto;
+		margin-top: 100px;
+		width: 100%;
+	}
 
 }
 
