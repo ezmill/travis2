@@ -137,6 +137,8 @@
 			})
 			$("#videos").click(function(e){
 				e.preventDefault();
+				window.history.pushState("object or string","Title", "../../../videos");
+
 				// $(this).css("text-decoration", "underline");
 				// $("img").hide();
 				$(".music, .coming-soon").hide();
@@ -147,11 +149,6 @@
 				$(".did-you").hide();
 				$(".videos").show();
 			})
-			$(window).onLoad = function(){
-				if((window).location.hash == "videos"){
-					console.log("cool");
-				}
-			}
 
 			$("#videos-mobile").click(function(e){
 				e.preventDefault();
